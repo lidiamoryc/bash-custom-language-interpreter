@@ -1,21 +1,25 @@
 grammar mash;
-program :	(var_declar | operation | loop | function | logical_operation)*;
+program :	(var_declar |array_declaration| operation | loop | function | logical_operation)*;
 
 var_declar :	type identifier '=' value;
-type    : 'string_var'
-        | 'array_var'
+array_declaration: array_var type identifier '=' array_value; // ZMIENIONE nw, czy dobrze
+// ale dziala lepiej niz wczensiej wiec
+//mysle ze w porzadku jest
+
+type    : 'string_var' //| 'array_var'
         | 'int_var'
         | 'bool_var'
         ;
 
 value   : string_value
-        | int_value
-        | array_value
+        | int_value //        | array_value
         | bool_value
         ;
 
-string_value : '"' .*? '"';
+//string_value : '"' *? '"';
+string_value: '"'(LETTER | DIGIT)*'"'; //ZMIENIONE i działa, I guess
 array_value  : '(' value (',' value)* ')';
+
 int_value    : INTEGER;
 bool_value   : 'true'
              | 'false'
