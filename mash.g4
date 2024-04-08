@@ -60,7 +60,7 @@ function    : function_definition
             | function_call
             ;
 
-function_definition :   identifier '(' ')' '{' operation '}';
+function_definition :   identifier '(' ')' '{' operation? '}'; // POPRAWIONE na operation? - mozliwosc pustej funckji
 
 function_call : identifier arguments;
 
