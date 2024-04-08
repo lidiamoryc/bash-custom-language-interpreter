@@ -27,6 +27,16 @@ public interface mashListener extends ParseTreeListener {
 	 */
 	void exitVar_declar(mashParser.Var_declarContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link mashParser#array_declaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterArray_declaration(mashParser.Array_declarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link mashParser#array_declaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitArray_declaration(mashParser.Array_declarationContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link mashParser#type}.
 	 * @param ctx the parse tree
 	 */

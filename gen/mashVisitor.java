@@ -22,6 +22,12 @@ public interface mashVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitVar_declar(mashParser.Var_declarContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link mashParser#array_declaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArray_declaration(mashParser.Array_declarationContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link mashParser#type}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
