@@ -41,6 +41,7 @@ DIGIT=40
 LETTER=41
 COMMENT=42
 WS=43
+WS_not_skip=44
 '='=1
 'string_var'=2
 'int_var'=3

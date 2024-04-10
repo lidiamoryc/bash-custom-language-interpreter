@@ -41,9 +41,6 @@ class mashVisitorCustom(mashVisitor):
         # Get the string value from the context
         string_value = ctx.string_value().getText()
 
-        # Remove the surrounding double quotes
-        string_value = string_value[2:-1]
-
         # Print the string value
         print(string_value)
 

@@ -6,7 +6,7 @@ from mashVisitorCustom import mashVisitorCustom
 
 def main():
     # Input string to parse
-    input_str = 'print "Dzien dobry polsko z tej strony alex "'
+    input_str = 'print "Hello world"'
 
     """
      MAMY ECHO ALE JA ZROBIŁAM SOBIE TEGO PRINTA POMOCNICZO, ŻEBY ZOBACZYC CO MAMY NIE TAK

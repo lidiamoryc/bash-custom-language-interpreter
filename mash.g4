@@ -83,6 +83,7 @@ DIGIT : [0-9]+;
 LETTER : [a-zA-Z_]+;
 COMMENT : '#' .*? '\n' -> skip;
 WS : [ \t\n\r]+ -> skip;
+WS_not_skip : [ ];
 
 string_var      : 'string_var';
 array_var       : 'array_var';
