@@ -1,30 +1,39 @@
 from antlr4 import *
-from antlr4.error.ErrorListener import ErrorListener
-from antlr4 import ParserRuleContext
-from antlr4.tree.Tree import ParseTree, TerminalNodeImpl
-
-from gen.mashLexer import mashLexer
-from gen.mashParser import mashParser
-from gen.mashListener import mashListener
-
-import sys
-
-class CustomListener(mashListener):
-    def enterVar_declar(self, ctx):
-        print("Variable declaration:", ctx.getText())
-
+from gen.mashLexer import mashLexer  # Import your visitor class
+from antlr4.InputStream import InputStream
+from mashVisitorCustom import mashParser
+from mashVisitorCustom import mashVisitorCustom
 
 def main():
-    input_code = "int_var x=5"  # Your input code here
+    # Input string to parse
+    input_str = 'print "Dzien dobry polsko z tej strony alex "'
 
-    lexer = mashLexer(InputStream(input_code))
-    tokens = CommonTokenStream(lexer)
-    parser = mashParser(tokens)
-    tree = parser.program()
+    """
+     MAMY ECHO ALE JA ZROBIŁAM SOBIE TEGO PRINTA POMOCNICZO, ŻEBY ZOBACZYC CO MAMY NIE TAK
+     I TEN PRINT ŚREDNIO DZIAŁA, ALE PRZYNAJMNIEJ DZIAŁA, NATOMIAST ECHO NIE DZIAŁA, PRZEZ JAKIŚ BŁĄD W GRAMATYCE
+    PRZY PRINCIE MAM OSTRZEŻENIE: 
+    line 1:5 extraneous input ' ' expecting '"'
+    """
 
-    listener = CustomListener()
-    walker = ParseTreeWalker()
-    walker.walk(listener, tree)
+    # Create an ANTLR input stream from the input string
+    input_stream = InputStream(input_str)
+
+    # Create a lexer and parser
+    lexer = mashLexer(input_stream)
+    token_stream = CommonTokenStream(lexer)
+    parser = mashParser(token_stream)
+
+    # Parse the input to generate the parse tree
+    parse_tree = parser.program()
+
+    # Create an instance of YourVisitorClass
+    visitor = mashVisitorCustom()
+
+    # Visit the parse tree with the visitor
+    visitor_result = visitor.visit(parse_tree)
+
+    # # Output the result (if any)
+    # print("Visitor result:", visitor_result)
 
 if __name__ == '__main__':
     main()

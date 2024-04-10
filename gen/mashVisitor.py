@@ -159,5 +159,10 @@ class mashVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by mashParser#print_string_statement.
+    def visitPrint_string_statement(self, ctx:mashParser.Print_string_statementContext):
+        return self.visitChildren(ctx)
+
+
 
 del mashParser

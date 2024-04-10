@@ -10,81 +10,83 @@ else:
 
 def serializedATN():
     return [
-        4,1,41,229,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,43,235,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
         7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
-        2,27,7,27,2,28,7,28,2,29,7,29,1,0,1,0,1,0,1,0,1,0,1,0,5,0,67,8,0,
-        10,0,12,0,70,9,0,1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,2,1,2,1,2,1,2,1,3,
-        1,3,1,4,1,4,1,4,3,4,88,8,4,1,5,1,5,5,5,92,8,5,10,5,12,5,95,9,5,1,
-        5,1,5,1,6,1,6,1,6,1,6,5,6,103,8,6,10,6,12,6,106,9,6,1,6,1,6,1,7,
-        1,7,1,8,1,8,1,9,1,9,3,9,116,8,9,1,10,1,10,1,10,1,10,1,11,1,11,1,
-        11,1,11,5,11,126,8,11,10,11,12,11,129,9,11,1,12,1,12,1,13,1,13,1,
-        13,1,13,1,13,1,13,1,13,1,13,1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,
-        14,1,14,3,14,150,8,14,1,14,1,14,1,14,3,14,155,8,14,1,14,1,14,3,14,
-        159,8,14,1,15,1,15,1,16,1,16,3,16,165,8,16,1,17,1,17,1,17,1,17,1,
-        17,1,17,1,17,1,17,1,18,1,18,1,18,1,18,1,18,1,18,1,19,1,19,3,19,183,
-        8,19,1,20,1,20,1,20,1,20,1,20,3,20,190,8,20,1,20,1,20,1,21,1,21,
-        1,21,1,22,1,22,5,22,199,8,22,10,22,12,22,202,9,22,1,23,1,23,1,23,
-        1,24,1,24,5,24,209,8,24,10,24,12,24,212,9,24,1,25,1,25,5,25,216,
-        8,25,10,25,12,25,219,9,25,1,26,1,26,1,27,1,27,1,28,1,28,1,29,1,29,
-        1,29,0,0,30,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,
-        38,40,42,44,46,48,50,52,54,56,58,0,6,1,0,2,4,1,0,38,39,1,0,9,10,
-        1,0,13,15,1,0,21,22,2,0,21,22,24,27,219,0,68,1,0,0,0,2,71,1,0,0,
-        0,4,76,1,0,0,0,6,82,1,0,0,0,8,87,1,0,0,0,10,89,1,0,0,0,12,98,1,0,
-        0,0,14,109,1,0,0,0,16,111,1,0,0,0,18,115,1,0,0,0,20,117,1,0,0,0,
-        22,121,1,0,0,0,24,130,1,0,0,0,26,132,1,0,0,0,28,158,1,0,0,0,30,160,
-        1,0,0,0,32,164,1,0,0,0,34,166,1,0,0,0,36,174,1,0,0,0,38,182,1,0,
-        0,0,40,184,1,0,0,0,42,193,1,0,0,0,44,196,1,0,0,0,46,203,1,0,0,0,
-        48,206,1,0,0,0,50,213,1,0,0,0,52,220,1,0,0,0,54,222,1,0,0,0,56,224,
-        1,0,0,0,58,226,1,0,0,0,60,67,3,2,1,0,61,67,3,4,2,0,62,67,3,18,9,
-        0,63,67,3,32,16,0,64,67,3,38,19,0,65,67,3,26,13,0,66,60,1,0,0,0,
-        66,61,1,0,0,0,66,62,1,0,0,0,66,63,1,0,0,0,66,64,1,0,0,0,66,65,1,
-        0,0,0,67,70,1,0,0,0,68,66,1,0,0,0,68,69,1,0,0,0,69,1,1,0,0,0,70,
-        68,1,0,0,0,71,72,3,6,3,0,72,73,3,50,25,0,73,74,5,1,0,0,74,75,3,8,
-        4,0,75,3,1,0,0,0,76,77,3,54,27,0,77,78,3,6,3,0,78,79,3,50,25,0,79,
-        80,5,1,0,0,80,81,3,12,6,0,81,5,1,0,0,0,82,83,7,0,0,0,83,7,1,0,0,
-        0,84,88,3,10,5,0,85,88,3,14,7,0,86,88,3,16,8,0,87,84,1,0,0,0,87,
-        85,1,0,0,0,87,86,1,0,0,0,88,9,1,0,0,0,89,93,5,5,0,0,90,92,7,1,0,
-        0,91,90,1,0,0,0,92,95,1,0,0,0,93,91,1,0,0,0,93,94,1,0,0,0,94,96,
-        1,0,0,0,95,93,1,0,0,0,96,97,5,5,0,0,97,11,1,0,0,0,98,99,5,6,0,0,
-        99,104,3,8,4,0,100,101,5,7,0,0,101,103,3,8,4,0,102,100,1,0,0,0,103,
-        106,1,0,0,0,104,102,1,0,0,0,104,105,1,0,0,0,105,107,1,0,0,0,106,
-        104,1,0,0,0,107,108,5,8,0,0,108,13,1,0,0,0,109,110,5,37,0,0,110,
-        15,1,0,0,0,111,112,7,2,0,0,112,17,1,0,0,0,113,116,3,20,10,0,114,
-        116,3,46,23,0,115,113,1,0,0,0,115,114,1,0,0,0,116,19,1,0,0,0,117,
-        118,5,11,0,0,118,119,3,22,11,0,119,120,5,12,0,0,120,21,1,0,0,0,121,
-        127,3,8,4,0,122,123,3,24,12,0,123,124,3,8,4,0,124,126,1,0,0,0,125,
-        122,1,0,0,0,126,129,1,0,0,0,127,125,1,0,0,0,127,128,1,0,0,0,128,
-        23,1,0,0,0,129,127,1,0,0,0,130,131,7,3,0,0,131,25,1,0,0,0,132,133,
-        5,16,0,0,133,134,3,28,14,0,134,135,5,17,0,0,135,136,3,18,9,0,136,
-        137,5,18,0,0,137,138,3,18,9,0,138,139,5,19,0,0,139,27,1,0,0,0,140,
-        141,5,20,0,0,141,142,3,16,8,0,142,143,7,4,0,0,143,144,3,16,8,0,144,
-        145,5,23,0,0,145,159,1,0,0,0,146,149,5,20,0,0,147,150,3,8,4,0,148,
-        150,3,50,25,0,149,147,1,0,0,0,149,148,1,0,0,0,150,151,1,0,0,0,151,
-        154,3,30,15,0,152,155,3,8,4,0,153,155,3,50,25,0,154,152,1,0,0,0,
-        154,153,1,0,0,0,155,156,1,0,0,0,156,157,5,23,0,0,157,159,1,0,0,0,
-        158,140,1,0,0,0,158,146,1,0,0,0,159,29,1,0,0,0,160,161,7,5,0,0,161,
-        31,1,0,0,0,162,165,3,34,17,0,163,165,3,36,18,0,164,162,1,0,0,0,164,
-        163,1,0,0,0,165,33,1,0,0,0,166,167,5,28,0,0,167,168,3,50,25,0,168,
-        169,5,29,0,0,169,170,3,12,6,0,170,171,5,30,0,0,171,172,3,18,9,0,
-        172,173,5,31,0,0,173,35,1,0,0,0,174,175,5,32,0,0,175,176,3,28,14,
-        0,176,177,5,30,0,0,177,178,3,18,9,0,178,179,5,31,0,0,179,37,1,0,
-        0,0,180,183,3,40,20,0,181,183,3,42,21,0,182,180,1,0,0,0,182,181,
-        1,0,0,0,183,39,1,0,0,0,184,185,3,50,25,0,185,186,5,6,0,0,186,187,
-        5,8,0,0,187,189,5,33,0,0,188,190,3,18,9,0,189,188,1,0,0,0,189,190,
-        1,0,0,0,190,191,1,0,0,0,191,192,5,34,0,0,192,41,1,0,0,0,193,194,
-        3,50,25,0,194,195,3,44,22,0,195,43,1,0,0,0,196,200,3,8,4,0,197,199,
-        3,8,4,0,198,197,1,0,0,0,199,202,1,0,0,0,200,198,1,0,0,0,200,201,
-        1,0,0,0,201,45,1,0,0,0,202,200,1,0,0,0,203,204,5,35,0,0,204,205,
-        3,48,24,0,205,47,1,0,0,0,206,210,3,8,4,0,207,209,3,8,4,0,208,207,
-        1,0,0,0,209,212,1,0,0,0,210,208,1,0,0,0,210,211,1,0,0,0,211,49,1,
-        0,0,0,212,210,1,0,0,0,213,217,5,39,0,0,214,216,7,1,0,0,215,214,1,
-        0,0,0,216,219,1,0,0,0,217,215,1,0,0,0,217,218,1,0,0,0,218,51,1,0,
-        0,0,219,217,1,0,0,0,220,221,5,2,0,0,221,53,1,0,0,0,222,223,5,36,
-        0,0,223,55,1,0,0,0,224,225,5,3,0,0,225,57,1,0,0,0,226,227,5,4,0,
-        0,227,59,1,0,0,0,16,66,68,87,93,104,115,127,149,154,158,164,182,
-        189,200,210,217
+        2,27,7,27,2,28,7,28,2,29,7,29,2,30,7,30,1,0,1,0,1,0,1,0,1,0,1,0,
+        1,0,5,0,70,8,0,10,0,12,0,73,9,0,1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,2,
+        1,2,1,2,1,2,1,3,1,3,1,4,1,4,1,4,3,4,91,8,4,1,5,1,5,5,5,95,8,5,10,
+        5,12,5,98,9,5,1,5,1,5,1,6,1,6,1,6,1,6,5,6,106,8,6,10,6,12,6,109,
+        9,6,1,6,1,6,1,7,1,7,1,8,1,8,1,9,1,9,3,9,119,8,9,1,10,1,10,1,10,1,
+        10,1,11,1,11,1,11,1,11,5,11,129,8,11,10,11,12,11,132,9,11,1,12,1,
+        12,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,14,1,14,1,14,1,14,1,
+        14,1,14,1,14,1,14,1,14,3,14,153,8,14,1,14,1,14,1,14,3,14,158,8,14,
+        1,14,1,14,3,14,162,8,14,1,15,1,15,1,16,1,16,3,16,168,8,16,1,17,1,
+        17,1,17,1,17,1,17,1,17,1,17,1,17,1,18,1,18,1,18,1,18,1,18,1,18,1,
+        19,1,19,3,19,186,8,19,1,20,1,20,1,20,1,20,1,20,3,20,193,8,20,1,20,
+        1,20,1,21,1,21,1,21,1,22,1,22,5,22,202,8,22,10,22,12,22,205,9,22,
+        1,23,1,23,1,23,1,24,1,24,5,24,212,8,24,10,24,12,24,215,9,24,1,25,
+        1,25,5,25,219,8,25,10,25,12,25,222,9,25,1,26,1,26,1,27,1,27,1,28,
+        1,28,1,29,1,29,1,30,1,30,1,30,1,30,0,0,31,0,2,4,6,8,10,12,14,16,
+        18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,
+        0,7,1,0,2,4,2,0,6,6,40,41,1,0,10,11,1,0,14,16,1,0,22,23,2,0,22,23,
+        25,28,1,0,40,41,225,0,71,1,0,0,0,2,74,1,0,0,0,4,79,1,0,0,0,6,85,
+        1,0,0,0,8,90,1,0,0,0,10,92,1,0,0,0,12,101,1,0,0,0,14,112,1,0,0,0,
+        16,114,1,0,0,0,18,118,1,0,0,0,20,120,1,0,0,0,22,124,1,0,0,0,24,133,
+        1,0,0,0,26,135,1,0,0,0,28,161,1,0,0,0,30,163,1,0,0,0,32,167,1,0,
+        0,0,34,169,1,0,0,0,36,177,1,0,0,0,38,185,1,0,0,0,40,187,1,0,0,0,
+        42,196,1,0,0,0,44,199,1,0,0,0,46,206,1,0,0,0,48,209,1,0,0,0,50,216,
+        1,0,0,0,52,223,1,0,0,0,54,225,1,0,0,0,56,227,1,0,0,0,58,229,1,0,
+        0,0,60,231,1,0,0,0,62,70,3,2,1,0,63,70,3,4,2,0,64,70,3,18,9,0,65,
+        70,3,32,16,0,66,70,3,38,19,0,67,70,3,26,13,0,68,70,3,60,30,0,69,
+        62,1,0,0,0,69,63,1,0,0,0,69,64,1,0,0,0,69,65,1,0,0,0,69,66,1,0,0,
+        0,69,67,1,0,0,0,69,68,1,0,0,0,70,73,1,0,0,0,71,69,1,0,0,0,71,72,
+        1,0,0,0,72,1,1,0,0,0,73,71,1,0,0,0,74,75,3,6,3,0,75,76,3,50,25,0,
+        76,77,5,1,0,0,77,78,3,8,4,0,78,3,1,0,0,0,79,80,3,54,27,0,80,81,3,
+        6,3,0,81,82,3,50,25,0,82,83,5,1,0,0,83,84,3,12,6,0,84,5,1,0,0,0,
+        85,86,7,0,0,0,86,7,1,0,0,0,87,91,3,10,5,0,88,91,3,14,7,0,89,91,3,
+        16,8,0,90,87,1,0,0,0,90,88,1,0,0,0,90,89,1,0,0,0,91,9,1,0,0,0,92,
+        96,5,5,0,0,93,95,7,1,0,0,94,93,1,0,0,0,95,98,1,0,0,0,96,94,1,0,0,
+        0,96,97,1,0,0,0,97,99,1,0,0,0,98,96,1,0,0,0,99,100,5,5,0,0,100,11,
+        1,0,0,0,101,102,5,7,0,0,102,107,3,8,4,0,103,104,5,8,0,0,104,106,
+        3,8,4,0,105,103,1,0,0,0,106,109,1,0,0,0,107,105,1,0,0,0,107,108,
+        1,0,0,0,108,110,1,0,0,0,109,107,1,0,0,0,110,111,5,9,0,0,111,13,1,
+        0,0,0,112,113,5,39,0,0,113,15,1,0,0,0,114,115,7,2,0,0,115,17,1,0,
+        0,0,116,119,3,20,10,0,117,119,3,46,23,0,118,116,1,0,0,0,118,117,
+        1,0,0,0,119,19,1,0,0,0,120,121,5,12,0,0,121,122,3,22,11,0,122,123,
+        5,13,0,0,123,21,1,0,0,0,124,130,3,8,4,0,125,126,3,24,12,0,126,127,
+        3,8,4,0,127,129,1,0,0,0,128,125,1,0,0,0,129,132,1,0,0,0,130,128,
+        1,0,0,0,130,131,1,0,0,0,131,23,1,0,0,0,132,130,1,0,0,0,133,134,7,
+        3,0,0,134,25,1,0,0,0,135,136,5,17,0,0,136,137,3,28,14,0,137,138,
+        5,18,0,0,138,139,3,18,9,0,139,140,5,19,0,0,140,141,3,18,9,0,141,
+        142,5,20,0,0,142,27,1,0,0,0,143,144,5,21,0,0,144,145,3,16,8,0,145,
+        146,7,4,0,0,146,147,3,16,8,0,147,148,5,24,0,0,148,162,1,0,0,0,149,
+        152,5,21,0,0,150,153,3,8,4,0,151,153,3,50,25,0,152,150,1,0,0,0,152,
+        151,1,0,0,0,153,154,1,0,0,0,154,157,3,30,15,0,155,158,3,8,4,0,156,
+        158,3,50,25,0,157,155,1,0,0,0,157,156,1,0,0,0,158,159,1,0,0,0,159,
+        160,5,24,0,0,160,162,1,0,0,0,161,143,1,0,0,0,161,149,1,0,0,0,162,
+        29,1,0,0,0,163,164,7,5,0,0,164,31,1,0,0,0,165,168,3,34,17,0,166,
+        168,3,36,18,0,167,165,1,0,0,0,167,166,1,0,0,0,168,33,1,0,0,0,169,
+        170,5,29,0,0,170,171,3,50,25,0,171,172,5,30,0,0,172,173,3,12,6,0,
+        173,174,5,31,0,0,174,175,3,18,9,0,175,176,5,32,0,0,176,35,1,0,0,
+        0,177,178,5,33,0,0,178,179,3,28,14,0,179,180,5,31,0,0,180,181,3,
+        18,9,0,181,182,5,32,0,0,182,37,1,0,0,0,183,186,3,40,20,0,184,186,
+        3,42,21,0,185,183,1,0,0,0,185,184,1,0,0,0,186,39,1,0,0,0,187,188,
+        3,50,25,0,188,189,5,7,0,0,189,190,5,9,0,0,190,192,5,34,0,0,191,193,
+        3,18,9,0,192,191,1,0,0,0,192,193,1,0,0,0,193,194,1,0,0,0,194,195,
+        5,35,0,0,195,41,1,0,0,0,196,197,3,50,25,0,197,198,3,44,22,0,198,
+        43,1,0,0,0,199,203,3,8,4,0,200,202,3,8,4,0,201,200,1,0,0,0,202,205,
+        1,0,0,0,203,201,1,0,0,0,203,204,1,0,0,0,204,45,1,0,0,0,205,203,1,
+        0,0,0,206,207,5,36,0,0,207,208,3,48,24,0,208,47,1,0,0,0,209,213,
+        3,8,4,0,210,212,3,8,4,0,211,210,1,0,0,0,212,215,1,0,0,0,213,211,
+        1,0,0,0,213,214,1,0,0,0,214,49,1,0,0,0,215,213,1,0,0,0,216,220,5,
+        41,0,0,217,219,7,6,0,0,218,217,1,0,0,0,219,222,1,0,0,0,220,218,1,
+        0,0,0,220,221,1,0,0,0,221,51,1,0,0,0,222,220,1,0,0,0,223,224,5,2,
+        0,0,224,53,1,0,0,0,225,226,5,37,0,0,226,55,1,0,0,0,227,228,5,3,0,
+        0,228,57,1,0,0,0,229,230,5,4,0,0,230,59,1,0,0,0,231,232,5,38,0,0,
+        232,233,3,10,5,0,233,61,1,0,0,0,16,69,71,90,96,107,118,130,152,157,
+        161,167,185,192,203,213,220
     ]
 
 class mashParser ( Parser ):
@@ -98,11 +100,11 @@ class mashParser ( Parser ):
     sharedContextCache = PredictionContextCache()
 
     literalNames = [ "<INVALID>", "'='", "'string_var'", "'int_var'", "'bool_var'", 
-                     "'\"'", "'('", "','", "')'", "'true'", "'false'", "'$(('", 
-                     "'))'", "'+'", "'-'", "'*'", "'if'", "'then'", "'else'", 
-                     "'fi'", "'['", "'=='", "'!='", "']'", "'<'", "'>'", 
-                     "'&&'", "'||'", "'for'", "'in'", "'do'", "'done'", 
-                     "'while'", "'{'", "'}'", "'echo'", "'array_var'" ]
+                     "'\"'", "' '", "'('", "','", "')'", "'true'", "'false'", 
+                     "'$(('", "'))'", "'+'", "'-'", "'*'", "'if'", "'then'", 
+                     "'else'", "'fi'", "'['", "'=='", "'!='", "']'", "'<'", 
+                     "'>'", "'&&'", "'||'", "'for'", "'in'", "'do'", "'done'", 
+                     "'while'", "'{'", "'}'", "'echo'", "'array_var'", "'print'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
@@ -113,8 +115,8 @@ class mashParser ( Parser ):
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "INTEGER", "DIGIT", "LETTER", "COMMENT", 
-                      "WS" ]
+                      "<INVALID>", "<INVALID>", "<INVALID>", "INTEGER", 
+                      "DIGIT", "LETTER", "COMMENT", "WS" ]
 
     RULE_program = 0
     RULE_var_declar = 1
@@ -146,6 +148,7 @@ class mashParser ( Parser ):
     RULE_array_var = 27
     RULE_int_var = 28
     RULE_bool_var = 29
+    RULE_print_string_statement = 30
 
     ruleNames =  [ "program", "var_declar", "array_declaration", "type", 
                    "value", "string_value", "array_value", "int_value", 
@@ -153,7 +156,8 @@ class mashParser ( Parser ):
                    "sign", "logical_operation", "condition", "logic_operator", 
                    "loop", "for_loop", "while_loop", "function", "function_definition", 
                    "function_call", "arguments", "echo_statement", "sentence", 
-                   "identifier", "string_var", "array_var", "int_var", "bool_var" ]
+                   "identifier", "string_var", "array_var", "int_var", "bool_var", 
+                   "print_string_statement" ]
 
     EOF = Token.EOF
     T__0=1
@@ -192,11 +196,13 @@ class mashParser ( Parser ):
     T__33=34
     T__34=35
     T__35=36
-    INTEGER=37
-    DIGIT=38
-    LETTER=39
-    COMMENT=40
-    WS=41
+    T__36=37
+    T__37=38
+    INTEGER=39
+    DIGIT=40
+    LETTER=41
+    COMMENT=42
+    WS=43
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -256,6 +262,13 @@ class mashParser ( Parser ):
                 return self.getTypedRuleContext(mashParser.Logical_operationContext,i)
 
 
+        def print_string_statement(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(mashParser.Print_string_statementContext)
+            else:
+                return self.getTypedRuleContext(mashParser.Print_string_statementContext,i)
+
+
         def getRuleIndex(self):
             return mashParser.RULE_program
 
@@ -283,41 +296,45 @@ class mashParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 68
+            self.state = 71
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 657398499356) != 0):
-                self.state = 66
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 2689186533404) != 0):
+                self.state = 69
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [2, 3, 4]:
-                    self.state = 60
+                    self.state = 62
                     self.var_declar()
                     pass
-                elif token in [36]:
-                    self.state = 61
+                elif token in [37]:
+                    self.state = 63
                     self.array_declaration()
                     pass
-                elif token in [11, 35]:
-                    self.state = 62
+                elif token in [12, 36]:
+                    self.state = 64
                     self.operation()
                     pass
-                elif token in [28, 32]:
-                    self.state = 63
+                elif token in [29, 33]:
+                    self.state = 65
                     self.loop()
                     pass
-                elif token in [39]:
-                    self.state = 64
+                elif token in [41]:
+                    self.state = 66
                     self.function()
                     pass
-                elif token in [16]:
-                    self.state = 65
+                elif token in [17]:
+                    self.state = 67
                     self.logical_operation()
+                    pass
+                elif token in [38]:
+                    self.state = 68
+                    self.print_string_statement()
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 70
+                self.state = 73
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -375,13 +392,13 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_var_declar)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 71
-            self.type_()
-            self.state = 72
-            self.identifier()
-            self.state = 73
-            self.match(mashParser.T__0)
             self.state = 74
+            self.type_()
+            self.state = 75
+            self.identifier()
+            self.state = 76
+            self.match(mashParser.T__0)
+            self.state = 77
             self.value()
         except RecognitionException as re:
             localctx.exception = re
@@ -441,15 +458,15 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_array_declaration)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 76
-            self.array_var()
-            self.state = 77
-            self.type_()
-            self.state = 78
-            self.identifier()
             self.state = 79
-            self.match(mashParser.T__0)
+            self.array_var()
             self.state = 80
+            self.type_()
+            self.state = 81
+            self.identifier()
+            self.state = 82
+            self.match(mashParser.T__0)
+            self.state = 83
             self.array_value()
         except RecognitionException as re:
             localctx.exception = re
@@ -495,7 +512,7 @@ class mashParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 82
+            self.state = 85
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 28) != 0)):
                 self._errHandler.recoverInline(self)
@@ -555,22 +572,22 @@ class mashParser ( Parser ):
         localctx = mashParser.ValueContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_value)
         try:
-            self.state = 87
+            self.state = 90
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [5]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 84
+                self.state = 87
                 self.string_value()
                 pass
-            elif token in [37]:
+            elif token in [39]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 85
+                self.state = 88
                 self.int_value()
                 pass
-            elif token in [9, 10]:
+            elif token in [10, 11]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 86
+                self.state = 89
                 self.bool_value()
                 pass
             else:
@@ -631,24 +648,24 @@ class mashParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 89
+            self.state = 92
             self.match(mashParser.T__4)
-            self.state = 93
+            self.state = 96
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==38 or _la==39:
-                self.state = 90
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 3298534883392) != 0):
+                self.state = 93
                 _la = self._input.LA(1)
-                if not(_la==38 or _la==39):
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 3298534883392) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 95
+                self.state = 98
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 96
+            self.state = 99
             self.match(mashParser.T__4)
         except RecognitionException as re:
             localctx.exception = re
@@ -700,24 +717,24 @@ class mashParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 98
-            self.match(mashParser.T__5)
-            self.state = 99
+            self.state = 101
+            self.match(mashParser.T__6)
+            self.state = 102
             self.value()
-            self.state = 104
+            self.state = 107
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==7:
-                self.state = 100
-                self.match(mashParser.T__6)
-                self.state = 101
+            while _la==8:
+                self.state = 103
+                self.match(mashParser.T__7)
+                self.state = 104
                 self.value()
-                self.state = 106
+                self.state = 109
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 107
-            self.match(mashParser.T__7)
+            self.state = 110
+            self.match(mashParser.T__8)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -763,7 +780,7 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 14, self.RULE_int_value)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 109
+            self.state = 112
             self.match(mashParser.INTEGER)
         except RecognitionException as re:
             localctx.exception = re
@@ -809,9 +826,9 @@ class mashParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 111
+            self.state = 114
             _la = self._input.LA(1)
-            if not(_la==9 or _la==10):
+            if not(_la==10 or _la==11):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -865,17 +882,17 @@ class mashParser ( Parser ):
         localctx = mashParser.OperationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 18, self.RULE_operation)
         try:
-            self.state = 115
+            self.state = 118
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [11]:
+            if token in [12]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 113
+                self.state = 116
                 self.arithmetic_operation()
                 pass
-            elif token in [35]:
+            elif token in [36]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 114
+                self.state = 117
                 self.echo_statement()
                 pass
             else:
@@ -927,12 +944,12 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 20, self.RULE_arithmetic_operation)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 117
-            self.match(mashParser.T__10)
-            self.state = 118
-            self.expression()
-            self.state = 119
+            self.state = 120
             self.match(mashParser.T__11)
+            self.state = 121
+            self.expression()
+            self.state = 122
+            self.match(mashParser.T__12)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -990,17 +1007,17 @@ class mashParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 121
+            self.state = 124
             self.value()
-            self.state = 127
+            self.state = 130
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 57344) != 0):
-                self.state = 122
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 114688) != 0):
+                self.state = 125
                 self.sign()
-                self.state = 123
+                self.state = 126
                 self.value()
-                self.state = 129
+                self.state = 132
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1048,9 +1065,9 @@ class mashParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 130
+            self.state = 133
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 57344) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 114688) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -1108,20 +1125,20 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 26, self.RULE_logical_operation)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 132
-            self.match(mashParser.T__15)
-            self.state = 133
-            self.condition()
-            self.state = 134
-            self.match(mashParser.T__16)
             self.state = 135
-            self.operation()
+            self.match(mashParser.T__16)
             self.state = 136
-            self.match(mashParser.T__17)
+            self.condition()
             self.state = 137
-            self.operation()
+            self.match(mashParser.T__17)
             self.state = 138
+            self.operation()
+            self.state = 139
             self.match(mashParser.T__18)
+            self.state = 140
+            self.operation()
+            self.state = 141
+            self.match(mashParser.T__19)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1189,64 +1206,64 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 28, self.RULE_condition)
         self._la = 0 # Token type
         try:
-            self.state = 158
+            self.state = 161
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 140
-                self.match(mashParser.T__19)
-                self.state = 141
+                self.state = 143
+                self.match(mashParser.T__20)
+                self.state = 144
                 self.bool_value()
-                self.state = 142
+                self.state = 145
                 _la = self._input.LA(1)
-                if not(_la==21 or _la==22):
+                if not(_la==22 or _la==23):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 143
+                self.state = 146
                 self.bool_value()
-                self.state = 144
-                self.match(mashParser.T__22)
+                self.state = 147
+                self.match(mashParser.T__23)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 146
-                self.match(mashParser.T__19)
                 self.state = 149
+                self.match(mashParser.T__20)
+                self.state = 152
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [5, 9, 10, 37]:
-                    self.state = 147
+                if token in [5, 10, 11, 39]:
+                    self.state = 150
                     self.value()
                     pass
-                elif token in [39]:
-                    self.state = 148
+                elif token in [41]:
+                    self.state = 151
                     self.identifier()
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 151
-                self.logic_operator()
                 self.state = 154
+                self.logic_operator()
+                self.state = 157
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [5, 9, 10, 37]:
-                    self.state = 152
+                if token in [5, 10, 11, 39]:
+                    self.state = 155
                     self.value()
                     pass
-                elif token in [39]:
-                    self.state = 153
+                elif token in [41]:
+                    self.state = 156
                     self.identifier()
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 156
-                self.match(mashParser.T__22)
+                self.state = 159
+                self.match(mashParser.T__23)
                 pass
 
 
@@ -1294,9 +1311,9 @@ class mashParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 160
+            self.state = 163
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 257949696) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 515899392) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -1350,17 +1367,17 @@ class mashParser ( Parser ):
         localctx = mashParser.LoopContext(self, self._ctx, self.state)
         self.enterRule(localctx, 32, self.RULE_loop)
         try:
-            self.state = 164
+            self.state = 167
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [28]:
+            if token in [29]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 162
+                self.state = 165
                 self.for_loop()
                 pass
-            elif token in [32]:
+            elif token in [33]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 163
+                self.state = 166
                 self.while_loop()
                 pass
             else:
@@ -1420,20 +1437,20 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 34, self.RULE_for_loop)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 166
-            self.match(mashParser.T__27)
-            self.state = 167
-            self.identifier()
-            self.state = 168
-            self.match(mashParser.T__28)
             self.state = 169
-            self.array_value()
+            self.match(mashParser.T__28)
             self.state = 170
-            self.match(mashParser.T__29)
+            self.identifier()
             self.state = 171
-            self.operation()
+            self.match(mashParser.T__29)
             self.state = 172
+            self.array_value()
+            self.state = 173
             self.match(mashParser.T__30)
+            self.state = 174
+            self.operation()
+            self.state = 175
+            self.match(mashParser.T__31)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1484,16 +1501,16 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 36, self.RULE_while_loop)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 174
-            self.match(mashParser.T__31)
-            self.state = 175
-            self.condition()
-            self.state = 176
-            self.match(mashParser.T__29)
             self.state = 177
-            self.operation()
+            self.match(mashParser.T__32)
             self.state = 178
+            self.condition()
+            self.state = 179
             self.match(mashParser.T__30)
+            self.state = 180
+            self.operation()
+            self.state = 181
+            self.match(mashParser.T__31)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1543,18 +1560,18 @@ class mashParser ( Parser ):
         localctx = mashParser.FunctionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 38, self.RULE_function)
         try:
-            self.state = 182
+            self.state = 185
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 180
+                self.state = 183
                 self.function_definition()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 181
+                self.state = 184
                 self.function_call()
                 pass
 
@@ -1610,24 +1627,24 @@ class mashParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 184
-            self.identifier()
-            self.state = 185
-            self.match(mashParser.T__5)
-            self.state = 186
-            self.match(mashParser.T__7)
             self.state = 187
-            self.match(mashParser.T__32)
+            self.identifier()
+            self.state = 188
+            self.match(mashParser.T__6)
             self.state = 189
+            self.match(mashParser.T__8)
+            self.state = 190
+            self.match(mashParser.T__33)
+            self.state = 192
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==11 or _la==35:
-                self.state = 188
+            if _la==12 or _la==36:
+                self.state = 191
                 self.operation()
 
 
-            self.state = 191
-            self.match(mashParser.T__33)
+            self.state = 194
+            self.match(mashParser.T__34)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1678,9 +1695,9 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 42, self.RULE_function_call)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 193
+            self.state = 196
             self.identifier()
-            self.state = 194
+            self.state = 197
             self.arguments()
         except RecognitionException as re:
             localctx.exception = re
@@ -1732,15 +1749,15 @@ class mashParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 196
+            self.state = 199
             self.value()
-            self.state = 200
+            self.state = 203
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 137438955040) != 0):
-                self.state = 197
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 549755816992) != 0):
+                self.state = 200
                 self.value()
-                self.state = 202
+                self.state = 205
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1790,9 +1807,9 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 46, self.RULE_echo_statement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 203
-            self.match(mashParser.T__34)
-            self.state = 204
+            self.state = 206
+            self.match(mashParser.T__35)
+            self.state = 207
             self.sentence()
         except RecognitionException as re:
             localctx.exception = re
@@ -1844,15 +1861,15 @@ class mashParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 206
+            self.state = 209
             self.value()
-            self.state = 210
+            self.state = 213
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 137438955040) != 0):
-                self.state = 207
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 549755816992) != 0):
+                self.state = 210
                 self.value()
-                self.state = 212
+                self.state = 215
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1911,20 +1928,20 @@ class mashParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 213
+            self.state = 216
             self.match(mashParser.LETTER)
-            self.state = 217
+            self.state = 220
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==38 or _la==39:
-                self.state = 214
+            while _la==40 or _la==41:
+                self.state = 217
                 _la = self._input.LA(1)
-                if not(_la==38 or _la==39):
+                if not(_la==40 or _la==41):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 219
+                self.state = 222
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1971,7 +1988,7 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 52, self.RULE_string_var)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 220
+            self.state = 223
             self.match(mashParser.T__1)
         except RecognitionException as re:
             localctx.exception = re
@@ -2016,8 +2033,8 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 54, self.RULE_array_var)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 222
-            self.match(mashParser.T__35)
+            self.state = 225
+            self.match(mashParser.T__36)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2061,7 +2078,7 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 56, self.RULE_int_var)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 224
+            self.state = 227
             self.match(mashParser.T__2)
         except RecognitionException as re:
             localctx.exception = re
@@ -2106,8 +2123,58 @@ class mashParser ( Parser ):
         self.enterRule(localctx, 58, self.RULE_bool_var)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 226
+            self.state = 229
             self.match(mashParser.T__3)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Print_string_statementContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def string_value(self):
+            return self.getTypedRuleContext(mashParser.String_valueContext,0)
+
+
+        def getRuleIndex(self):
+            return mashParser.RULE_print_string_statement
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrint_string_statement" ):
+                listener.enterPrint_string_statement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrint_string_statement" ):
+                listener.exitPrint_string_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrint_string_statement" ):
+                return visitor.visitPrint_string_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def print_string_statement(self):
+
+        localctx = mashParser.Print_string_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 60, self.RULE_print_string_statement)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 231
+            self.match(mashParser.T__37)
+            self.state = 232
+            self.string_value()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)

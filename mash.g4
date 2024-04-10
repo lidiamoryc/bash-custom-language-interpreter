@@ -1,5 +1,5 @@
 grammar mash;
-program :	(var_declar |array_declaration| operation | loop | function | logical_operation)*;
+program :	(var_declar |array_declaration| operation | loop | function | logical_operation | print_string_statement)*;
 
 var_declar :	type identifier '=' value;
 array_declaration: array_var type identifier '=' array_value; // ZMIENIONE nw, czy dobrze
@@ -17,7 +17,8 @@ value   : string_value
         ;
 
 //string_value : '"' *? '"';
-string_value: '"'(LETTER | DIGIT)*'"'; //ZMIENIONE i działa, I guess
+string_value: '"' (LETTER | DIGIT |' ')* '"';
+ //ZMIENIONE i działa, I guess
 array_value  : '(' value (',' value)* ')';
 
 int_value    : INTEGER;
@@ -87,3 +88,5 @@ string_var      : 'string_var';
 array_var       : 'array_var';
 int_var         : 'int_var';
 bool_var        : 'bool_var';
+
+print_string_statement: 'print' string_value;

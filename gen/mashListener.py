@@ -278,5 +278,14 @@ class mashListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by mashParser#print_string_statement.
+    def enterPrint_string_statement(self, ctx:mashParser.Print_string_statementContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#print_string_statement.
+    def exitPrint_string_statement(self, ctx:mashParser.Print_string_statementContext):
+        pass
+
+
 
 del mashParser
