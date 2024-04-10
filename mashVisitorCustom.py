@@ -42,7 +42,7 @@ class mashVisitorCustom(mashVisitor):
         string_value = ctx.string_value().getText()
 
         # Print the string value
-        print(string_value)
+        print(string_value[2:-1])
 
         # Return None as there's no specific return value for print statements
         return None
