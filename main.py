@@ -7,11 +7,11 @@ from mashVisitorCustom import mashVisitorCustom
 
 def main():
     # Input string to parse
-    input_str = 'echo $(((10/2)+7+2*3))'
-
-    # Create an ANTLR input stream from the input string
-    input_stream = InputStream(input_str)
-
+    # input_str = 'echo $(((10/2)+7+2*3))'
+    # input_str = 'echo $(((10/2)+7+2*3))  \n echo "hej"'
+    # # Create an ANTLR input stream from the input string
+    # input_stream = InputStream(input_str)
+    input_stream = FileStream("test.mash")
     # Create a lexer and parser
     lexer = mashLexer(input_stream)
     token_stream = CommonTokenStream(lexer)
