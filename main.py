@@ -7,7 +7,7 @@ from mashVisitorCustom import mashVisitorCustom
 
 def main():
     # Input string to parse
-    input_str = 'echo $(((2+2)*2))' # dzielenie nie dziala ale tak to jest dobrze :-)
+    input_str = 'echo $(((10/2)+7+2*3))'
 
     # Create an ANTLR input stream from the input string
     input_stream = InputStream(input_str)

@@ -85,7 +85,7 @@ class mashVisitorCustom(mashVisitor):
         elif operator == '/':
             if right == 0:
                 raise ValueError("Division by zero!")
-            return left / right
+            return int(left / right)
 
     def visitPrimary_expression(self, ctx: mashParser.Primary_expressionContext):
         # # If there's an INTEGER, convert to integer
