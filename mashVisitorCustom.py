@@ -5,6 +5,7 @@ from antlr4 import *
 from gen.mashParser import mashParser
 from gen.mashVisitor import mashVisitor
 
+
 class mashVisitorCustom(mashVisitor):
     def __int__(self):
         self.variables = {}
