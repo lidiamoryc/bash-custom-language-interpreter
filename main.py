@@ -4,16 +4,10 @@ from antlr4.InputStream import InputStream
 from mashVisitorCustom import mashParser
 from mashVisitorCustom import mashVisitorCustom
 
+
 def main():
     # Input string to parse
-    input_str = 'print "Hello world"'
-
-    """
-     MAMY ECHO ALE JA ZROBIŁAM SOBIE TEGO PRINTA POMOCNICZO, ŻEBY ZOBACZYC CO MAMY NIE TAK
-     I TEN PRINT ŚREDNIO DZIAŁA, ALE PRZYNAJMNIEJ DZIAŁA, NATOMIAST ECHO NIE DZIAŁA, PRZEZ JAKIŚ BŁĄD W GRAMATYCE
-    PRZY PRINCIE MAM OSTRZEŻENIE: 
-    line 1:5 extraneous input ' ' expecting '"'
-    """
+    input_str = 'echo $(((2+2)*2))' # dzielenie nie dziala ale tak to jest dobrze :-)
 
     # Create an ANTLR input stream from the input string
     input_stream = InputStream(input_str)
@@ -23,14 +17,27 @@ def main():
     token_stream = CommonTokenStream(lexer)
     parser = mashParser(token_stream)
 
-    # Parse the input to generate the parse tree
-    parse_tree = parser.program()
+    parser.removeErrorListeners()
+    # parser.addErrorListener(MyErrorListener())
 
-    # Create an instance of YourVisitorClass
+    try:
+        tree = parser.program()
+    except SyntaxError as e:
+        print(e)
+        exit(1)
+
     visitor = mashVisitorCustom()
-
-    # Visit the parse tree with the visitor
-    visitor_result = visitor.visit(parse_tree)
+    visitor.visit(tree)
+    # parser = mashParser(token_stream)
+    #
+    # # Parse the input to generate the parse tree
+    # parse_tree = parser.program()
+    #
+    # # Create an instance of YourVisitorClass
+    # visitor = mashVisitorCustom()
+    #
+    # # Visit the parse tree with the visitor
+    # visitor_result = visitor.visit(parse_tree)
 
     # # Output the result (if any)
     # print("Visitor result:", visitor_result)
