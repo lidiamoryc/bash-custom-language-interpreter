@@ -54,6 +54,16 @@ class mashVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by mashParser#logical_expression.
+    def visitLogical_expression(self, ctx:mashParser.Logical_expressionContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#comparison_expression.
+    def visitComparison_expression(self, ctx:mashParser.Comparison_expressionContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by mashParser#type.
     def visitType(self, ctx:mashParser.TypeContext):
         return self.visitChildren(ctx)

@@ -3,3 +3,9 @@ echo "hej"
 echo $(((3+2)*3+2*3/3))
 # wynik tego dzialania to 17
 
+echo 3<5
+echo 3>5
+echo 3==5
+echo 3!=5
+echo 5==5
+echo 5!=5

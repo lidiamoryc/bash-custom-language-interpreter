@@ -89,6 +89,24 @@ class mashListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by mashParser#logical_expression.
+    def enterLogical_expression(self, ctx:mashParser.Logical_expressionContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#logical_expression.
+    def exitLogical_expression(self, ctx:mashParser.Logical_expressionContext):
+        pass
+
+
+    # Enter a parse tree produced by mashParser#comparison_expression.
+    def enterComparison_expression(self, ctx:mashParser.Comparison_expressionContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#comparison_expression.
+    def exitComparison_expression(self, ctx:mashParser.Comparison_expressionContext):
+        pass
+
+
     # Enter a parse tree produced by mashParser#type.
     def enterType(self, ctx:mashParser.TypeContext):
         pass
