@@ -6,7 +6,7 @@ statement : echo_function | var_declar;
 
 echo_function : 'echo' expression;
 
-expression : '$((' arithmetic_expression '))'| string_expression;
+expression : '$((' arithmetic_expression '))'| string_expression | logical_expression;
 
 string_expression : STRING;
 
@@ -27,6 +27,16 @@ multiplicative_expression : primary_expression
 // Primary expression includes integers and nested expressions
 primary_expression : INTEGER
                     | '(' additive_expression ')';
+
+logical_expression : comparison_expression
+                    | logical_expression 'and' logical_expression
+                    | logical_expression 'or' logical_expression
+                    | 'not' logical_expression
+                    | '(' logical_expression ')'
+                    | 'true'
+                    | 'false';
+
+comparison_expression : arithmetic_expression ('<' | '>' | '==' | '!=') arithmetic_expression;
 
 //arithmetic_operation : '$((' numeric_expression '))';
 
