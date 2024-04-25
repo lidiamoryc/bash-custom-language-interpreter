@@ -1,11 +1,3 @@
-echo $(((10/2)+7+2*3))
-echo "Hello World"
-echo $(((3+2)*3+2*3/3))
-# wynik tego dzialania to 17
-
-echo 3<5
-echo 3>5
-echo 3==5
-echo 3!=5
-echo 5==5
-echo 5!=5
+int_var x; x = 5; int_var y; y = x + 3;
+int_var x; x = 5; y = x + 3;
+int_var a; a = 10; int_var a; a = 20;
