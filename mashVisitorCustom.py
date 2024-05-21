@@ -1,13 +1,10 @@
-import warnings
-
 from antlr4 import *
-
+import sys
 from gen.mashParser import mashParser
 from gen.mashVisitor import mashVisitor
 
-
 class mashVisitorCustom(mashVisitor):
-    def __int__(self):
+    def __init__(self):
         self.variables = {}
 
     def visitProgram(self, ctx: mashParser.ProgramContext):
@@ -17,19 +14,23 @@ class mashVisitorCustom(mashVisitor):
         return result
 
     def visitStatement(self, ctx: mashParser.StatementContext):
-        # self.visitEcho_function(ctx.echo_function)
         return self.visitChildren(ctx)
 
     def visitEcho_function(self, ctx: mashParser.Echo_functionContext):
-        # echoed_value = self.visit(ctx.expression())
-        # print(echoed_value)
-        # expression = ctx.expression()
-        result = self.visit(ctx.expression())
+        if ctx.expression():
+            result = self.visit(ctx.expression())
+        else:
+            var_name = ctx.IDENTIFIER().getText()
+            if var_name not in self.variables:
+                raise Exception(f"Variable '{var_name}' is not declared.")
+            result = self.variables[var_name]["value"]
 
         if isinstance(result, str):
-            print(result.strip('"'))  # Strip quotes if it's a string
+            print(result.strip('"'))
         elif isinstance(result, int):
             print(result)
+        elif isinstance(result, bool):
+            print("true" if result else "false")
         return result
 
     def visitExpression(self, ctx: mashParser.ExpressionContext):
@@ -39,38 +40,39 @@ class mashVisitorCustom(mashVisitor):
             return self.visit(ctx.string_expression())
         elif ctx.logical_expression():
             return self.visit(ctx.logical_expression())
+        elif ctx.int_expression():
+            return int(ctx.int_expression().getText())
+        elif ctx.IDENTIFIER():
+            var_name = ctx.IDENTIFIER().getText()
+            if var_name not in self.variables:
+                raise Exception(f"Variable '{var_name}' is not declared.")
+            return self.variables[var_name]["value"]
         return None
 
     def visitArithmetic_expression(self, ctx: mashParser.Arithmetic_expressionContext):
         return self.visit(ctx.additive_expression())
 
     def visitAdditive_expression(self, ctx: mashParser.Additive_expressionContext):
-        # If there's a single child, return its evaluation
         if ctx.getChildCount() == 1:
             return self.visit(ctx.getChild(0))
 
-        # Visit left and right expressions with the operator
         left = self.visit(ctx.getChild(0))
         operator = ctx.getChild(1).getText()
         right = self.visit(ctx.getChild(2))
 
-        # Handle addition and subtraction
         if operator == '+':
             return left + right
         elif operator == '-':
             return left - right
 
     def visitMultiplicative_expression(self, ctx: mashParser.Multiplicative_expressionContext):
-        # If there's a single child, return its evaluation
         if ctx.getChildCount() == 1:
             return self.visit(ctx.getChild(0))
 
-        # Visit left and right expressions with the operator
         left = self.visit(ctx.getChild(0))
         operator = ctx.getChild(1).getText()
         right = self.visit(ctx.getChild(2))
 
-        # Handle multiplication and division
         if operator == '*':
             return left * right
         elif operator == '/':
@@ -79,29 +81,26 @@ class mashVisitorCustom(mashVisitor):
             return int(left / right)
 
     def visitPrimary_expression(self, ctx: mashParser.Primary_expressionContext):
-        # # If there's an INTEGER, convert to integer
-        # if ctx.INTEGER():
-        #     return int(ctx.INTEGER().getText())
-        # # Otherwise, recursively evaluate nested expressions
-        # return self.visit(ctx.getChild(0))
         if ctx.INTEGER():
             return int(ctx.INTEGER().getText())
-        elif ctx.getChildCount() == 3:  # Handles brackets (e.g., (expression))
-            return self.visit(ctx.getChild(1))  # Visit the inner expression
-
+        elif ctx.IDENTIFIER():
+            var_name = ctx.IDENTIFIER().getText()
+            if var_name not in self.variables:
+                raise Exception(f"Variable '{var_name}' is not declared.")
+            return self.variables[var_name]["value"]
+        elif ctx.getChildCount() == 3:
+            return self.visit(ctx.getChild(1))
         return None
 
     def visitString_expression(self, ctx: mashParser.String_expressionContext):
         return ctx.STRING().getText()
 
     def visitLogical_expression(self, ctx: mashParser.Logical_expressionContext):
-        # Handle logical constants
-        if ctx.getText() == "true" or ctx.getText() == "1":
+        if ctx.getText() == "true":
             return True
-        elif ctx.getText() == "false" or ctx.getText() == "0":
+        elif ctx.getText() == "false":
             return False
 
-        # Handle logical operations
         if ctx.getChildCount() == 3:
             left = self.visit(ctx.getChild(0))
             operator = ctx.getChild(1).getText()
@@ -111,12 +110,10 @@ class mashVisitorCustom(mashVisitor):
             elif operator == 'or':
                 return left or right
 
-        # Handle logical negation
         if ctx.getChildCount() == 2 and ctx.getChild(0).getText() == 'not':
             expr = self.visit(ctx.getChild(1))
             return not expr
 
-        # Handle expressions in parentheses
         if ctx.getChildCount() == 3 and ctx.getChild(0).getText() == '(':
             return self.visit(ctx.getChild(1))
 
@@ -126,9 +123,14 @@ class mashVisitorCustom(mashVisitor):
         return None
 
     def visitComparison_expression(self, ctx: mashParser.Comparison_expressionContext):
-        left = self.visit(ctx.arithmetic_expression(0))
-        right = self.visit(ctx.arithmetic_expression(1))
+        left = self.visit(ctx.getChild(0))
+        right = self.visit(ctx.getChild(2))
         operator = ctx.getChild(1).getText()
+
+        if isinstance(left, str):
+            left = left.strip('"')
+        if isinstance(right, str):
+            right = right.strip('"')
 
         if operator == '<':
             return left < right
@@ -139,3 +141,60 @@ class mashVisitorCustom(mashVisitor):
         elif operator == '!=':
             return left != right
 
+    def visitVar_declar(self, ctx: mashParser.Var_declarContext):
+        var_type = ctx.type_().getText()
+        var_name = ctx.IDENTIFIER(0).getText()
+        if var_name in self.variables:
+            print(f"Error: Variable '{var_name}' is already declared.", file=sys.stderr)
+            return None
+        self.variables[var_name] = {"type": var_type, "value": None}
+
+        if ctx.expression():
+            value = self.visit(ctx.expression())
+            if var_type == "int_var" and not isinstance(value, int):
+                print(f"Error: Variable '{var_name}' must be assigned an integer.", file=sys.stderr)
+                return None
+            elif var_type == "string_var" and not isinstance(value, str):
+                print(f"Error: Variable '{var_name}' must be assigned a string.", file=sys.stderr)
+                return None
+            self.variables[var_name]["value"] = value
+        elif ctx.IDENTIFIER(1):
+            assigned_var_name = ctx.IDENTIFIER(1).getText()
+            if assigned_var_name not in self.variables:
+                print(f"Error: Variable '{assigned_var_name}' is not declared.", file=sys.stderr)
+                return None
+            value = self.variables[assigned_var_name]["value"]
+            if var_type == "int_var" and not isinstance(value, int):
+                print(f"Error: Variable '{var_name}' must be assigned an integer.", file=sys.stderr)
+                return None
+            elif var_type == "string_var" and not isinstance(value, str):
+                print(f"Error: Variable '{var_name}' must be assigned a string.", file=sys.stderr)
+                return None
+            self.variables[var_name]["value"] = value
+
+        return None
+
+    def visitAssignment(self, ctx: mashParser.AssignmentContext):
+        var_name = ctx.IDENTIFIER(0).getText()
+        if var_name not in self.variables:
+            print(f"Error: Variable '{var_name}' is not declared.", file=sys.stderr)
+            return None
+        var_type = self.variables[var_name]["type"]
+
+        if ctx.IDENTIFIER(1):
+            assigned_var_name = ctx.IDENTIFIER(1).getText()
+            if assigned_var_name not in self.variables:
+                print(f"Error: Variable '{assigned_var_name}' is not declared.", file=sys.stderr)
+                return None
+            value = self.variables[assigned_var_name]["value"]
+        else:
+            value = self.visit(ctx.expression())
+
+        if var_type == "int_var" and not isinstance(value, int):
+            print(f"Error: Variable '{var_name}' must be assigned an integer.", file=sys.stderr)
+            return None
+        elif var_type == "string_var" and not isinstance(value, str):
+            print(f"Error: Variable '{var_name}' must be assigned a string.", file=sys.stderr)
+            return None
+        self.variables[var_name]["value"] = value
+        return value
