@@ -1,42 +1,47 @@
-from gen.VariableLangLexer import VariableLangLexer  # Lexer dla języka
-from gen.VariableLangParser import VariableLangParser  # Parser dla języka
-from gen.VariableLangListener import VariableLangListener  # Listener bazowy generowany przez ANTLR
-from gen.VariableLangVisitor import VariableLangVisitor
 from antlr4 import *
+from gen.mashLexer import mashLexer  # Import your visitor class
+from antlr4.InputStream import InputStream
+from mashVisitorCustom import mashParser
+from mashVisitorCustom import mashVisitorCustom
 
-from VariableDeclarationListener import VariableDeclarationListener  # Klasa listenera dla deklaracji zmiennych
-from VariableOperationVisitor import VariableOperationVisitor
 
 def main():
-    input_stream = InputStream('int_var x; x = 5; int_var y; y = x + 3;')
-    # int_var x; x = 5; y = x + 3;
-    # int_var a; a = 10; int_var a; a = 20;'
-    lexer = VariableLangLexer(input_stream)
-    stream = CommonTokenStream(lexer)
-    parser = VariableLangParser(stream)
-    tree = parser.program()
+    # Input string to parse
+    # input_str = 'echo $(((10/2)+7+2*3))'
+    # input_str = 'echo $(((10/2)+7+2*3))  \n echo "hej"'
+    # # Create an ANTLR input stream from the input string
+    # input_stream = InputStream(input_str)
+    input_stream = FileStream("test.mash")
+    # Create a lexer and parser
+    lexer = mashLexer(input_stream)
+    token_stream = CommonTokenStream(lexer)
+    parser = mashParser(token_stream)
 
-    # Pierwszy przebieg: deklaracje
-    declarationListener = VariableDeclarationListener()
-    walker = ParseTreeWalker()
+    parser.removeErrorListeners()
+    # parser.addErrorListener(MyErrorListener())
+
     try:
-        walker.walk(declarationListener, tree)
-        # Sprawdźmy, czy nie wystąpiły błędy podczas deklaracji
-        if declarationListener.errors:
-            print("Errors found during declaration:")
-            for error in declarationListener.errors:
-                print(error)
-    except Exception as e:
-        print(f"Error during declaration phase: {str(e)}")
+        tree = parser.program()
+    except SyntaxError as e:
+        print(e)
+        exit(1)
 
-    # Drugi przebieg: wykonanie
-    if not declarationListener.errors:  # Wykonuj tylko, jeśli nie ma błędów deklaracji
-        operationVisitor = VariableOperationVisitor(declarationListener.variables)
-        try:
-            operationVisitor.visit(tree)
-            print(operationVisitor.variables)
-        except Exception as e:
-            print(f"Runtime error: {str(e)}")
+    visitor = mashVisitorCustom()
+    visitor.visit(tree)
+    # parser = mashParser(token_stream)
+    #
+    # # Parse the input to generate the parse tree
+    # parse_tree = parser.program()
+    #
+    # # Create an instance of YourVisitorClass
+    # visitor = mashVisitorCustom()
+    #
+    # # Visit the parse tree with the visitor
+    # visitor_result = visitor.visit(parse_tree)
+
+    # # Output the result (if any)
+    # print("Visitor result:", visitor_result)
+
 
 if __name__ == '__main__':
     main()
