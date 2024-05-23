@@ -53,6 +53,15 @@ class mashListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by mashParser#int_expression.
+    def enterInt_expression(self, ctx:mashParser.Int_expressionContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#int_expression.
+    def exitInt_expression(self, ctx:mashParser.Int_expressionContext):
+        pass
+
+
     # Enter a parse tree produced by mashParser#arithmetic_expression.
     def enterArithmetic_expression(self, ctx:mashParser.Arithmetic_expressionContext):
         pass
@@ -107,6 +116,15 @@ class mashListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by mashParser#var_declar.
+    def enterVar_declar(self, ctx:mashParser.Var_declarContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#var_declar.
+    def exitVar_declar(self, ctx:mashParser.Var_declarContext):
+        pass
+
+
     # Enter a parse tree produced by mashParser#type.
     def enterType(self, ctx:mashParser.TypeContext):
         pass
@@ -116,12 +134,93 @@ class mashListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by mashParser#var_declar.
-    def enterVar_declar(self, ctx:mashParser.Var_declarContext):
+    # Enter a parse tree produced by mashParser#assignment.
+    def enterAssignment(self, ctx:mashParser.AssignmentContext):
         pass
 
-    # Exit a parse tree produced by mashParser#var_declar.
-    def exitVar_declar(self, ctx:mashParser.Var_declarContext):
+    # Exit a parse tree produced by mashParser#assignment.
+    def exitAssignment(self, ctx:mashParser.AssignmentContext):
+        pass
+
+
+    # Enter a parse tree produced by mashParser#while_statement.
+    def enterWhile_statement(self, ctx:mashParser.While_statementContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#while_statement.
+    def exitWhile_statement(self, ctx:mashParser.While_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by mashParser#for_statement.
+    def enterFor_statement(self, ctx:mashParser.For_statementContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#for_statement.
+    def exitFor_statement(self, ctx:mashParser.For_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by mashParser#if_statement.
+    def enterIf_statement(self, ctx:mashParser.If_statementContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#if_statement.
+    def exitIf_statement(self, ctx:mashParser.If_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by mashParser#function_declar.
+    def enterFunction_declar(self, ctx:mashParser.Function_declarContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#function_declar.
+    def exitFunction_declar(self, ctx:mashParser.Function_declarContext):
+        pass
+
+
+    # Enter a parse tree produced by mashParser#parameters.
+    def enterParameters(self, ctx:mashParser.ParametersContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#parameters.
+    def exitParameters(self, ctx:mashParser.ParametersContext):
+        pass
+
+
+    # Enter a parse tree produced by mashParser#parameter.
+    def enterParameter(self, ctx:mashParser.ParameterContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#parameter.
+    def exitParameter(self, ctx:mashParser.ParameterContext):
+        pass
+
+
+    # Enter a parse tree produced by mashParser#return_type.
+    def enterReturn_type(self, ctx:mashParser.Return_typeContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#return_type.
+    def exitReturn_type(self, ctx:mashParser.Return_typeContext):
+        pass
+
+
+    # Enter a parse tree produced by mashParser#function_call.
+    def enterFunction_call(self, ctx:mashParser.Function_callContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#function_call.
+    def exitFunction_call(self, ctx:mashParser.Function_callContext):
+        pass
+
+
+    # Enter a parse tree produced by mashParser#arguments.
+    def enterArguments(self, ctx:mashParser.ArgumentsContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#arguments.
+    def exitArguments(self, ctx:mashParser.ArgumentsContext):
         pass
 
 

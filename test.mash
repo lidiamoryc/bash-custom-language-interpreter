@@ -1,11 +1,10 @@
-echo $(((10/2)+7+2*3))
-echo "Hello World"
-echo $(((3+2)*3+2*3/3))
-# wynik tego dzialania to 17
+function FUN (int_var g) { echo g }
 
-echo 3<5
-echo 3>5
-echo 3==5
-echo 3!=5
-echo 5==5
-echo 5!=5
+FUN (6)
+
+int_var x = 10
+FUN (x)
+
+
+
+

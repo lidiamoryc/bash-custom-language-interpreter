@@ -1,0 +1,22 @@
+
+# Define a function that takes two integers, adds them, and returns the result
+function add(int_var a, int_var b) -> int_var {
+    int_var result = a + b
+    return result
+}
+
+# Define a function that takes a string and echoes it
+function greet(string_var name) {
+    echo name
+}
+
+# Declare variables
+int_var x = 5
+int_var y = 10
+
+int_var sum = add(x, y)
+
+echo sum  # Should output 15
+
+
+greet("Hello World")

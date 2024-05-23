@@ -34,6 +34,11 @@ class mashVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by mashParser#int_expression.
+    def visitInt_expression(self, ctx:mashParser.Int_expressionContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by mashParser#arithmetic_expression.
     def visitArithmetic_expression(self, ctx:mashParser.Arithmetic_expressionContext):
         return self.visitChildren(ctx)
@@ -64,13 +69,63 @@ class mashVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by mashParser#var_declar.
+    def visitVar_declar(self, ctx:mashParser.Var_declarContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by mashParser#type.
     def visitType(self, ctx:mashParser.TypeContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by mashParser#var_declar.
-    def visitVar_declar(self, ctx:mashParser.Var_declarContext):
+    # Visit a parse tree produced by mashParser#assignment.
+    def visitAssignment(self, ctx:mashParser.AssignmentContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#while_statement.
+    def visitWhile_statement(self, ctx:mashParser.While_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#for_statement.
+    def visitFor_statement(self, ctx:mashParser.For_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#if_statement.
+    def visitIf_statement(self, ctx:mashParser.If_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#function_declar.
+    def visitFunction_declar(self, ctx:mashParser.Function_declarContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#parameters.
+    def visitParameters(self, ctx:mashParser.ParametersContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#parameter.
+    def visitParameter(self, ctx:mashParser.ParameterContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#return_type.
+    def visitReturn_type(self, ctx:mashParser.Return_typeContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#function_call.
+    def visitFunction_call(self, ctx:mashParser.Function_callContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#arguments.
+    def visitArguments(self, ctx:mashParser.ArgumentsContext):
         return self.visitChildren(ctx)
 
 

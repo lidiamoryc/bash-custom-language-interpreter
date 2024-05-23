@@ -1,0 +1,44 @@
+echo $(((10/2)+7+2*3))
+echo "Hello World"
+echo $(((3+2)*3+2*3/3))
+# wynik tego dzialania to 17
+
+echo 3<5
+echo 3>5
+echo 3==5
+echo 3!=5
+echo 5==5
+echo 5!=5
+
+
+
+int_var x = 10
+int_var y = x
+echo x
+
+echo $((2+x))
+echo x<5
+
+echo $((x+y+100))
+
+string_var z = "Hello World"
+echo z
+
+string_var w = z
+echo w
+
+echo "funkcja po prostu"
+
+function FUN (int_var g) { echo g }
+
+FUN (6)
+
+FUN (x)
+
+echo "funkcja zwracajaca"
+
+function FUN2(int_var arg1, int_var arg2) -> int_var {$((arg1+arg2))}
+
+int_var result = FUN2(20,x)
+
+echo result
