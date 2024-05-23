@@ -1,1 +1,4 @@
-deklaracja zmiennych typu int i działanie na nich, zwracanie błędu po braku deklaracji (w pierwszym przebiegu) i ponownej deklaracji (w drugim przebiegu)
+M Myrta/Moryc/Misiaczyńska \
+A Again \
+S \
+H Shell 
