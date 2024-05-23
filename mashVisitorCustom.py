@@ -9,6 +9,7 @@ from gen.mashVisitor import mashVisitor
 class mashVisitorCustom(mashVisitor):
     def __int__(self):
         self.variables = {}
+        self.functions = {}
 
     def visitProgram(self, ctx: mashParser.ProgramContext):
         result = []
@@ -17,7 +18,6 @@ class mashVisitorCustom(mashVisitor):
         return result
 
     def visitStatement(self, ctx: mashParser.StatementContext):
-        # self.visitEcho_function(ctx.echo_function)
         return self.visitChildren(ctx)
 
     def visitEcho_function(self, ctx: mashParser.Echo_functionContext):
@@ -45,32 +45,26 @@ class mashVisitorCustom(mashVisitor):
         return self.visit(ctx.additive_expression())
 
     def visitAdditive_expression(self, ctx: mashParser.Additive_expressionContext):
-        # If there's a single child, return its evaluation
         if ctx.getChildCount() == 1:
             return self.visit(ctx.getChild(0))
 
-        # Visit left and right expressions with the operator
         left = self.visit(ctx.getChild(0))
         operator = ctx.getChild(1).getText()
         right = self.visit(ctx.getChild(2))
 
-        # Handle addition and subtraction
         if operator == '+':
             return left + right
         elif operator == '-':
             return left - right
 
     def visitMultiplicative_expression(self, ctx: mashParser.Multiplicative_expressionContext):
-        # If there's a single child, return its evaluation
         if ctx.getChildCount() == 1:
             return self.visit(ctx.getChild(0))
 
-        # Visit left and right expressions with the operator
         left = self.visit(ctx.getChild(0))
         operator = ctx.getChild(1).getText()
         right = self.visit(ctx.getChild(2))
 
-        # Handle multiplication and division
         if operator == '*':
             return left * right
         elif operator == '/':
@@ -95,13 +89,11 @@ class mashVisitorCustom(mashVisitor):
         return ctx.STRING().getText()
 
     def visitLogical_expression(self, ctx: mashParser.Logical_expressionContext):
-        # Handle logical constants
         if ctx.getText() == "true" or ctx.getText() == "1":
             return True
         elif ctx.getText() == "false" or ctx.getText() == "0":
             return False
 
-        # Handle logical operations
         if ctx.getChildCount() == 3:
             left = self.visit(ctx.getChild(0))
             operator = ctx.getChild(1).getText()
@@ -111,12 +103,10 @@ class mashVisitorCustom(mashVisitor):
             elif operator == 'or':
                 return left or right
 
-        # Handle logical negation
         if ctx.getChildCount() == 2 and ctx.getChild(0).getText() == 'not':
             expr = self.visit(ctx.getChild(1))
             return not expr
 
-        # Handle expressions in parentheses
         if ctx.getChildCount() == 3 and ctx.getChild(0).getText() == '(':
             return self.visit(ctx.getChild(1))
 
