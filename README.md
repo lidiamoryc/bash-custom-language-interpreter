@@ -136,7 +136,7 @@ Poniżej przedstawiono przykładowy kod w języku mash oraz sposób jego przetwo
 
 Przykładowy kod w języku mash (zapisany w pliku test.mash):
 
-'''
+```
 # Deklaracja i inicjalizacja zmiennych
 int_var x = 10
 int_var y = 5
@@ -174,7 +174,7 @@ for (int_var i = 0; i < y; i = i + 1) {
 
 # Final message
 echo "Script execution completed."
-'''
+```
 
 # Instalacja i uruchomienie
 Aby uruchomić interpreter, wykonaj poniższe kroki:
