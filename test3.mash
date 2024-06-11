@@ -1,8 +1,29 @@
-int_var i
-int_var j
-for (i=0; i<5; i=$((i+1))){
-    for (j=0; j<5; j=$((j+1))){
-        echo i
-        echo j
+int_var n = 10
+
+function fibonacci1(int_var n) {
+    if (n < 3 ) {
+        return n
+    } else {
+        return $((
+            fibonacci1($((n-1))) + fibonacci1($((n-2)))
+        ))
     }
 }
+
+function fibonacci2(int_var n) {
+    if (n == 0 ) {
+        return 0
+    } elif (n==1){
+        return 0
+    } elif (n==2){
+        return 1
+    }
+    else {
+        return $((
+            fibonacci2($((n-1))) + fibonacci2($((n-2)))
+        ))
+    }
+}
+
+echo fibonacci1(n)
+echo fibonacci2(n)

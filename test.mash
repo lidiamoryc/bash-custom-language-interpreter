@@ -1,7 +1,5 @@
-# Variable declaration
-int_var n = 10
+int_var n = 5
 
-# Function declaration for factorial
 function factorial(int_var n) {
     if (n == 1) {
         return 1

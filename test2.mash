@@ -1,18 +1,15 @@
-
-function add(int_var a, int_var b) -> int_var {
-    int_var result = a + b
-    return result
+function factorial(int_var n) -> int_var {
+    function one() -> int_var {
+        return 1
+    }
+    if(n == 1 or n == 0) {
+        return one()
+    }
+    return $((
+                n * factorial($((n-1)))
+            ))
 }
-
-function greet(string_var name) {
-    echo name
-}
-
-int_var x = 5
-int_var y = 10
-
-int_var sum = add(x, y)
-
-echo sum
-
-greet("Hello World")
+int_var x = factorial(1)
+echo x
+echo factorial()
+echo factorial(5)
