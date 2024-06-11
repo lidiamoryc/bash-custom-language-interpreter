@@ -170,6 +170,24 @@ class mashListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by mashParser#elif_block.
+    def enterElif_block(self, ctx:mashParser.Elif_blockContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#elif_block.
+    def exitElif_block(self, ctx:mashParser.Elif_blockContext):
+        pass
+
+
+    # Enter a parse tree produced by mashParser#else_block.
+    def enterElse_block(self, ctx:mashParser.Else_blockContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#else_block.
+    def exitElse_block(self, ctx:mashParser.Else_blockContext):
+        pass
+
+
     # Enter a parse tree produced by mashParser#function_declar.
     def enterFunction_declar(self, ctx:mashParser.Function_declarContext):
         pass
@@ -221,6 +239,24 @@ class mashListener(ParseTreeListener):
 
     # Exit a parse tree produced by mashParser#arguments.
     def exitArguments(self, ctx:mashParser.ArgumentsContext):
+        pass
+
+
+    # Enter a parse tree produced by mashParser#return_statement.
+    def enterReturn_statement(self, ctx:mashParser.Return_statementContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#return_statement.
+    def exitReturn_statement(self, ctx:mashParser.Return_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by mashParser#statement_list.
+    def enterStatement_list(self, ctx:mashParser.Statement_listContext):
+        pass
+
+    # Exit a parse tree produced by mashParser#statement_list.
+    def exitStatement_list(self, ctx:mashParser.Statement_listContext):
         pass
 
 

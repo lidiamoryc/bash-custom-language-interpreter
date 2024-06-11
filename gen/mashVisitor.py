@@ -99,6 +99,16 @@ class mashVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by mashParser#elif_block.
+    def visitElif_block(self, ctx:mashParser.Elif_blockContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#else_block.
+    def visitElse_block(self, ctx:mashParser.Else_blockContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by mashParser#function_declar.
     def visitFunction_declar(self, ctx:mashParser.Function_declarContext):
         return self.visitChildren(ctx)
@@ -126,6 +136,16 @@ class mashVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by mashParser#arguments.
     def visitArguments(self, ctx:mashParser.ArgumentsContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#return_statement.
+    def visitReturn_statement(self, ctx:mashParser.Return_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#statement_list.
+    def visitStatement_list(self, ctx:mashParser.Statement_listContext):
         return self.visitChildren(ctx)
 
 

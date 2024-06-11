@@ -1,10 +1,15 @@
-function FUN (int_var g) { echo g }
+# Variable declaration
+int_var n = 10
 
-FUN (6)
+# Function declaration for factorial
+function factorial(int_var n) {
+    if (n == 1) {
+        return 1
+    } else {
+        return $((
+            n * factorial($((n-1)))
+        ))
+    }
+}
 
-int_var x = 10
-FUN (x)
-
-
-
-
+echo factorial(n)
