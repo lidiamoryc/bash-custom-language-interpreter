@@ -119,7 +119,27 @@ Gramatyka języka mash definiuje następujące elementy:
   elif (x == 5) { echo "x is equal to 5" } 
   else { echo "x is less than 5" }
   ```
+  
+    ### Wywołania funkcji
+- **Opis**: Wywołuje funkcje zdefiniowane przez użytkownika.
+- **Definicja w gramatyce**: 
+  ```antlr
+  function_call : IDENTIFIER '(' (expression (',' expression)*)? ')';
+  ```
+- **Przykład użycia**:
+  ```mash
+  function fibonacci1(int_var n) {
+    if (n < 3 ) {
+        return n
+    } else {
+        return $((
+            fibonacci1($((n-1))) + fibonacci1($((n-2)))
+        ))
+    }
+  }
+  ```
 
+  
 # Implementacja mashVisitorCustom
 Klasa mashVisitorCustom jest implementacją visitora, który odwiedza węzły drzewa parsowania i wykonuje odpowiednie działania. Poniżej opisano niektóre z głównych metod:
 
