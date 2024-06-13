@@ -347,3 +347,27 @@ class mashVisitorCustom(mashVisitor):
                 return float(value)
         except ValueError:
             raise CustomTypeError(f"Cannot convert {value} to {var_type}", -1)
+
+    def visitIncrement_statement(self, ctx: mashParser.Increment_statementContext):
+        line = ctx.start.line
+        var_name = ctx.IDENTIFIER().getText()
+        var = self.lookupVariable(var_name, line)
+
+        if var.type in ("int_var", "float_var"):
+            var.value = self.convert_to_numeric_type(var.type, var.value) + 1
+        else:
+            raise CustomTypeError(f"Cannot increment variable of type '{var.type}'", line)
+
+        return var.value
+
+    def visitDecrement_statement(self, ctx: mashParser.Decrement_statementContext):
+        line = ctx.start.line
+        var_name = ctx.IDENTIFIER().getText()
+        var = self.lookupVariable(var_name, line)
+
+        if var.type in ("int_var", "float_var"):
+            var.value = self.convert_to_numeric_type(var.type, var.value) - 1
+        else:
+            raise CustomTypeError(f"Cannot decrement variable of type '{var.type}'", line)
+
+        return var.value
