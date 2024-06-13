@@ -223,7 +223,7 @@ class mashVisitorCustom(mashVisitor):
         line = ctx.start.line
         var_type = ctx.type_().getText()
         var_name = ctx.IDENTIFIER(0).getText()
-        print(f"Declaring variable: {var_name} of type: {var_type}")
+        #print(f"Declaring variable: {var_name} of type: {var_type}")
         if var_name in self.scopes[-1]:
             raise CustomSyntaxError(f"Variable '{var_name}' is already declared.", line)
         self.addVariable(var_name, var_type, None)
@@ -234,7 +234,7 @@ class mashVisitorCustom(mashVisitor):
             var.value = value
         elif len(ctx.IDENTIFIER()) > 1:
             assigned_var_name = ctx.IDENTIFIER(1).getText()
-            print(f"Assigning value from variable: {assigned_var_name} to {var_name}")
+           # print(f"Assigning value from variable: {assigned_var_name} to {var_name}")
             assigned_var = self.lookupVariable(assigned_var_name, line)
             var = self.lookupVariable(var_name, line)
             var.value = assigned_var.value
@@ -244,12 +244,12 @@ class mashVisitorCustom(mashVisitor):
     def visitAssignment(self, ctx: mashParser.AssignmentContext):
         line = ctx.start.line
         var_name = ctx.IDENTIFIER(0).getText()
-        print(f"Assigning value to variable: {var_name}")
+        #print(f"Assigning value to variable: {var_name}")
         var = self.lookupVariable(var_name, line)
 
         if len(ctx.IDENTIFIER()) > 1:
             assigned_var_name = ctx.IDENTIFIER(1).getText()
-            print(f"Assigning value from variable: {assigned_var_name} to {var_name}")
+            #print(f"Assigning value from variable: {assigned_var_name} to {var_name}")
             assigned_var = self.lookupVariable(assigned_var_name, line)
             var.value = assigned_var.value
         else:

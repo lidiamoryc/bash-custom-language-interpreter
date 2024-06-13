@@ -1,0 +1,17 @@
+int_var x
+x = $((2+2*2+4+5*2))
+# x is 20
+
+
+echo "petla while dla zmiennej x"
+while (x > 0) {
+    echo x
+    x--
+}
+
+echo "petla while dla zmiennej y"
+int_var y = $((x+3*5))
+while ( y < 30) {
+    echo y
+    y = $((y+3))
+}

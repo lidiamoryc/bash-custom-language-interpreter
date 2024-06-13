@@ -2,7 +2,7 @@ function factorial(int_var n) -> int_var {
     function one() -> int_var {
         return 1
     }
-    if(n == 1 or n == 0) {
+    if (n == 1 or n == 0) {
         return one()
     }
     return $((
@@ -11,5 +11,4 @@ function factorial(int_var n) -> int_var {
 }
 int_var x = factorial(1)
 echo x
-echo factorial()
 echo factorial(5)

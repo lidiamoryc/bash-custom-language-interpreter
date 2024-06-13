@@ -1,0 +1,23 @@
+int_var i = 5
+
+i = $((i+2))
+
+echo i
+
+for (i=5; i>1; i--) {
+    echo i
+}
+
+for (int_var j = 0; j < 5; j++){
+    echo j
+}
+
+int_var m = 0
+for (int_var k = 0; k<3; k++) {
+    echo "wartosc dla k"
+    echo k
+    for (m=0; m<2; m++){
+        echo "wartosc dla m"
+        echo m
+    }
+}

@@ -19,7 +19,7 @@ class CustomErrorListener(ErrorListener):
 
 
 def main():
-    input_stream = FileStream("test6.mash")
+    input_stream = FileStream("test_for_loop.mash")
     lexer = mashLexer(input_stream)
     token_stream = CommonTokenStream(lexer)
     parser = mashParser(token_stream)

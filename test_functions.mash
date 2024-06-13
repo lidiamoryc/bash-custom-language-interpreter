@@ -1,0 +1,16 @@
+function add(int_var num1, int_var num2) -> int_var {
+    return $((num1+num2))
+}
+
+function multiplyByTwo(int_var num1) -> int_var{
+    return $((2 * num1))
+}
+
+int_var x = 2
+int_var y = multiplyByTwo(x)
+int_var z = add(x,y)
+
+echo x
+echo y
+echo z
+echo $((z+y*x))

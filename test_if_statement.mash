@@ -1,0 +1,5 @@
+int_var x = 3
+
+if (x > 5) { echo "x is greater than five" }
+elif (x == 5) { echo "x is equal to five" }
+else { echo "x is less than five" }

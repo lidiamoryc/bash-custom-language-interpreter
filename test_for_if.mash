@@ -1,0 +1,6 @@
+for (int_var x = 0; x<10; x++){
+    echo x
+    if (x > 5) { echo "is greater than five" }
+    elif (x == 5) { echo "is equal to five" }
+    else { echo "is less than five" }
+}

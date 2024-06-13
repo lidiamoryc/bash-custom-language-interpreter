@@ -1,0 +1,10 @@
+function greetings() {
+    echo "Hello Mash"
+}
+
+function printValue(string_var x) {
+    echo x
+}
+
+echo greetings()
+echo printValue("Hello User")
