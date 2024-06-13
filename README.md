@@ -98,11 +98,13 @@ Gramatyka języka mash definiuje następujące elementy:
 - **Opis**:  Wykonuje pętlę for.
 - **Definicja w gramatyce**: 
   ```antlr
-  for_statement : 'for' '(' assignment ';' logical_expression ';' assignment ')' '{' statement* '}';
+  for_statement : 'for' '(' (assignment | var_declar) ';' logical_expression ';' (increment_statement | decrement_statement | assignment) ')' '{' statement* '}';
   ```
 - **Przykład użycia**:
   ```mash
-  for (int_var i = 0; i < 10; i = i + 1) { echo i }
+  for (int_var i = 0; i < 10; i = i + 1) {
+      echo i
+      }
   ```
 
     ### Intrukcje warunkowe
@@ -118,6 +120,20 @@ Gramatyka języka mash definiuje następujące elementy:
   if (x > 5) { echo "x is greater than 5" } 
   elif (x == 5) { echo "x is equal to 5" } 
   else { echo "x is less than 5" }
+  ```
+
+    ### Inkrementacja i dekrementacja
+- **Opis**:  Odpowiednio zwiększa i zmnijesza wartość zmiennej typu int_var o 1.
+- **Definicja w gramatyce**: 
+  ```antlr
+  increment_statement : IDENTIFIER '++' ;
+  decrement_statement : IDENTIFIER '--' ;
+  ```
+- **Przykład użycia**:
+  ```mash
+  int_var x = 5
+  x++
+  x--
   ```
   
     ### Wywołania funkcji
@@ -138,7 +154,6 @@ Gramatyka języka mash definiuje następujące elementy:
     }
   }
   ```
-
   
 # Implementacja mashVisitorCustom
 Klasa mashVisitorCustom jest implementacją visitora, który odwiedza węzły drzewa parsowania i wykonuje odpowiednie działania. Poniżej opisano niektóre z głównych metod:
@@ -195,6 +210,19 @@ for (int_var i = 0; i < y; i++) {
 # Final message
 echo "Script execution completed."
 ```
+
+# Przyjazne komunikaty o błędach
+
+Interpreter języka mash obsługuje następujące przyjazne komunikaty o błędach, które mogą wystąpić podczas wykonywania skryptu:
+
+- **Błąd zadeklarowania zmiennej**: Gdy zmienna jest deklarowana ponownie w tym samym zakresie, interpreter zgłosi błąd. 
+- **Błąd odwołania do niezadeklarowanej zmiennej**: Gdy skrypt próbuje odwołać się do zmiennej, która nie została wcześniej zadeklarowana, interpreter zgłosi błąd.
+- **Błąd typu danych**: Gdy wystąpi próba wykonania operacji na zmiennych niewłaściwego typu danych, interpreter zgłosi błąd.
+- **Błąd podziału przez zero**: Gdy w skrypcie wystąpi próba dzielenia przez zero, interpreter zgłosi błąd. 
+- **Błąd składniowy**: Gdy w skrypcie wystąpi błąd składniowy, na przykład nieprawidłowe użycie instrukcji, interpreter zgłosi błąd.
+- 
+Te komunikaty są zaprojektowane tak, aby pomóc użytkownikom zidentyfikować i zrozumieć błędy w ich skryptach w jasny sposób. Każdy komunikat zawiera numer linii, w której wystąpił błąd, co ułatwia debugowanie i poprawę skryptów napisanych w języku mash.
+
 
 # Instalacja i uruchomienie
 Aby uruchomić interpreter, wykonaj poniższe kroki:
