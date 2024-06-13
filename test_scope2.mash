@@ -1,0 +1,10 @@
+int_var mainParam = 10
+
+function testParametrScope(int_var param) -> int_var {
+    echo param
+    param = $((param+100))
+    echo param
+}
+
+echo testParametrScope(mainParam)
+echo mainParam

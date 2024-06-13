@@ -1,0 +1,18 @@
+int_var globalInt = 10
+string_var globalString = "Hello Mash"
+
+function testScope(){
+    int_var localInt = 100
+    string_var localString = "Bye Mash"
+    echo globalInt
+    echo globalString
+    echo localInt
+    echo localString
+}
+
+
+echo testScope()
+echo globalInt
+echo globalString
+echo localInt
+# echo localString
