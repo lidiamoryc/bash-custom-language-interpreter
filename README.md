@@ -1,7 +1,5 @@
-M Myrta/Moryc/Misiaczyńska \
-A Again \
-S \
-H Shell 
+# Dokumentacja języka Mash
+Emilia Myrta, Diana Misiaczyńska, Lidia Moryc
 
 # Opis programu
 Program ten jest interpreterem języka mash, napisanego przy użyciu narzędzia ANTLR (Another Tool for Language Recognition). Język mash jest prostym językiem skryptowym, który pozwala na wykonywanie podstawowych operacji arytmetycznych, logicznych oraz manipulację zmiennymi. Dodatkowo, język ten wspiera struktury kontrolne, takie jak pętle (while, for) oraz instrukcje warunkowe (if, elif, else).
