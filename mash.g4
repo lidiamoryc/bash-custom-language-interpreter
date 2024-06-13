@@ -9,7 +9,12 @@ statement : echo_function
           | while_statement
           | for_statement
           | function_declar
-          | return_statement;
+          | return_statement
+          | increment_statement
+          | decrement_statement;
+
+increment_statement : IDENTIFIER '++' ;
+decrement_statement : IDENTIFIER '--' ;
 
 echo_function : 'echo' (expression | IDENTIFIER);
 

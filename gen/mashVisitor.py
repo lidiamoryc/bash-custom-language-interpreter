@@ -1,4 +1,4 @@
-# Generated from C:/Users/diana/PycharmProjects/mash/mash.g4 by ANTLR 4.13.1
+# Generated from C:/Users/Lee/Desktop/masf-final2/mash.g4 by ANTLR 4.13.1
 from antlr4 import *
 if "." in __name__:
     from .mashParser import mashParser
@@ -16,6 +16,16 @@ class mashVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by mashParser#statement.
     def visitStatement(self, ctx:mashParser.StatementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#increment_statement.
+    def visitIncrement_statement(self, ctx:mashParser.Increment_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mashParser#decrement_statement.
+    def visitDecrement_statement(self, ctx:mashParser.Decrement_statementContext):
         return self.visitChildren(ctx)
 
 
