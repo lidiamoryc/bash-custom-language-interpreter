@@ -98,11 +98,13 @@ Gramatyka języka mash definiuje następujące elementy:
 - **Opis**:  Wykonuje pętlę for.
 - **Definicja w gramatyce**: 
   ```antlr
-  for_statement : 'for' '(' assignment ';' logical_expression ';' assignment ')' '{' statement* '}';
+  for_statement : 'for' '(' (assignment | var_declar) ';' logical_expression ';' (increment_statement | decrement_statement | assignment) ')' '{' statement* '}';
   ```
 - **Przykład użycia**:
   ```mash
-  for (int_var i = 0; i < 10; i = i + 1) { echo i }
+  for (int_var i = 0; i < 10; i = i + 1) {
+      echo i
+      }
   ```
 
     ### Intrukcje warunkowe
@@ -118,6 +120,20 @@ Gramatyka języka mash definiuje następujące elementy:
   if (x > 5) { echo "x is greater than 5" } 
   elif (x == 5) { echo "x is equal to 5" } 
   else { echo "x is less than 5" }
+  ```
+
+    ### Inkrementacja i dekrementacja
+- **Opis**:  Odpowiednio zwiększa i zmnijesza wartość zmiennej typu int_var o 1.
+- **Definicja w gramatyce**: 
+  ```antlr
+  increment_statement : IDENTIFIER '++' ;
+  decrement_statement : IDENTIFIER '--' ;
+  ```
+- **Przykład użycia**:
+  ```mash
+  int_var x = 5
+  x++
+  x--
   ```
   
     ### Wywołania funkcji
