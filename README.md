@@ -183,12 +183,12 @@ else {
 echo "Countdown from x to 0:"
 while (x > 0) { 
   echo x 
-  x = x - 1 
+  x--
 }
 
 # Pętla for
 echo "Counting from 0 to y:"
-for (int_var i = 0; i < y; i = i + 1) { 
+for (int_var i = 0; i < y; i++) { 
   echo i 
 }
 
