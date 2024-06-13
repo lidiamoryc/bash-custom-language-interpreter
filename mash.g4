@@ -59,7 +59,7 @@ assignment : IDENTIFIER '=' (expression | IDENTIFIER);
 
 while_statement : 'while' '(' logical_expression ')' '{' statement* '}';
 
-for_statement : 'for' '(' assignment ';' logical_expression ';' assignment ')' '{' statement* '}';
+for_statement : 'for' '(' (assignment | var_declar) ';' logical_expression ';' (increment_statement | decrement_statement | assignment) ')' '{' statement* '}';
 
 if_statement : 'if' '(' logical_expression ')' '{' statement* '}' elif_block* else_block?;
 

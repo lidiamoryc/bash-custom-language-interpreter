@@ -223,6 +223,7 @@ class mashVisitorCustom(mashVisitor):
         line = ctx.start.line
         var_type = ctx.type_().getText()
         var_name = ctx.IDENTIFIER(0).getText()
+        print(f"Declaring variable: {var_name} of type: {var_type}")
         if var_name in self.scopes[-1]:
             raise CustomSyntaxError(f"Variable '{var_name}' is already declared.", line)
         self.addVariable(var_name, var_type, None)
@@ -231,8 +232,9 @@ class mashVisitorCustom(mashVisitor):
             value = self.visit(ctx.expression())
             var = self.lookupVariable(var_name, line)
             var.value = value
-        elif ctx.IDENTIFIER(1):
+        elif len(ctx.IDENTIFIER()) > 1:
             assigned_var_name = ctx.IDENTIFIER(1).getText()
+            print(f"Assigning value from variable: {assigned_var_name} to {var_name}")
             assigned_var = self.lookupVariable(assigned_var_name, line)
             var = self.lookupVariable(var_name, line)
             var.value = assigned_var.value
@@ -241,11 +243,13 @@ class mashVisitorCustom(mashVisitor):
 
     def visitAssignment(self, ctx: mashParser.AssignmentContext):
         line = ctx.start.line
-        var_name = ctx.IDENTIFIER().getText()
+        var_name = ctx.IDENTIFIER(0).getText()
+        print(f"Assigning value to variable: {var_name}")
         var = self.lookupVariable(var_name, line)
 
-        if ctx.IDENTIFIER(1):
+        if len(ctx.IDENTIFIER()) > 1:
             assigned_var_name = ctx.IDENTIFIER(1).getText()
+            print(f"Assigning value from variable: {assigned_var_name} to {var_name}")
             assigned_var = self.lookupVariable(assigned_var_name, line)
             var.value = assigned_var.value
         else:
@@ -329,13 +333,25 @@ class mashVisitorCustom(mashVisitor):
         return None
 
     def visitFor_statement(self, ctx: mashParser.For_statementContext):
-        self.visit(ctx.assignment(0))
+        # Inicjalizacja (assignment lub var_declar)
+        if ctx.assignment(0):
+            self.visit(ctx.assignment(0))
+        elif ctx.var_declar():
+            self.visit(ctx.var_declar())
 
+        # Pętla
         while self.visit(ctx.logical_expression()):
+            # Ciało pętli
             for statement in ctx.statement():
                 self.visit(statement)
 
-            self.visit(ctx.assignment(1))
+            # Krok pętli (increment_statement, assignment lub decrement_statement)
+            if ctx.increment_statement():
+                self.visit(ctx.increment_statement())
+            elif ctx.assignment(1):
+                self.visit(ctx.assignment(1))
+            elif ctx.decrement_statement():
+                self.visit(ctx.decrement_statement())
 
         return None
 
